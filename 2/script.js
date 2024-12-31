@@ -9,39 +9,39 @@
 // }))
 
 
-// const output = document.querySelector('.output');
-// let scrollEventCounter = 0;
+const output = document.querySelector('.output');
+let scrollEventCounter = 0;
 
-// document.addEventListener('scroll', () => {
-//     scrollEventCounter += 1;
-//     output.textContent = scrollEventCounter
-// })
+document.addEventListener('scroll', () => {
+    scrollEventCounter += 1;
+    output.textContent = scrollEventCounter
+})
 
 
 
-// const vanillaOutput = document.querySelector('.output.vanilla');
-// const throttledOutput = document.querySelector('.output.throttled');
-// const debouncedOutput = document.querySelector('.output.debounced');
-// const eventCounter = {
-//     vanilla: 0,
-//     throttled: 0,
-//     debounced: 0
-// }
+const vanillaOutput = document.querySelector('.output.vanilla');
+const throttledOutput = document.querySelector('.output.throttled');
+const debouncedOutput = document.querySelector('.output.debounced');
+const eventCounter = {
+    vanilla: 0,
+    throttled: 0,
+    debounced: 0
+}
 
-// document.addEventListener('scroll', () => {
-//     eventCounter.vanilla += 1;
-//     vanillaOutput.textContent = eventCounter.vanilla;
-// });
+document.addEventListener('scroll', () => {
+    eventCounter.vanilla += 1;
+    vanillaOutput.textContent = eventCounter.vanilla;
+});
 
-// document.addEventListener('scroll', _.throttle(() => {
-//     eventCounter.throttled += 1;
-//     throttledOutput.textContent = eventCounter.throttled;
-// }, 5000));
+document.addEventListener('scroll', _.throttle(() => {
+    eventCounter.throttled += 1;
+    throttledOutput.textContent = eventCounter.throttled;
+}, 5000));
 
-// document.addEventListener('scroll', _.debounce(() => {
-//     eventCounter.debounced += 1;
-//     debouncedOutput.textContent = eventCounter.debounced;
-// }, 500));
+document.addEventListener('scroll', _.debounce(() => {
+    eventCounter.debounced += 1;
+    debouncedOutput.textContent = eventCounter.debounced;
+}, 500));
 
 
 
@@ -57,17 +57,17 @@
 
 
 
-const box = document.getElementById('box');
+// const box = document.getElementById('box');
 
-const moveBox = (x, y) => {
-    box.style.left = `${x}px`;
-    box.style.top = `${y}px`;
-};
+// const moveBox = (x, y) => {
+//     box.style.left = `${x}px`;
+//     box.style.top = `${y}px`;
+// };
 
-const debouncedMoveBox = _.debounce((x,y) => moveBox(x, y), 0.1);
+// const debouncedMoveBox = _.debounce((x,y) => moveBox(x, y), 0.1);
 
-document.addEventListener('mousemove', (event) => {
-    const x = event.clientX;
-    const y = event.clientY;
-    debouncedMoveBox(x, y);
-})
+// document.addEventListener('mousemove', (event) => {
+//     const x = event.clientX;
+//     const y = event.clientY;
+//     debouncedMoveBox(x, y);
+// })
