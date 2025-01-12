@@ -1,0 +1,12 @@
+img.lazy-load {
+    height: 200px;
+    background-color: #f0f0f0;
+    display: block;
+    margin: 10px auto;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+img.lazy-load.loaded {
+    opacity: 1;
+}
